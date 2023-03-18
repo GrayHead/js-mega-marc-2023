@@ -1,10 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+
+<script>
+    // let arr = [];
+    // // arr[arr.length] = 100;
+    // // arr[arr.length] = 200;
+    // arr.push(100);
+    // arr.push(200);
+    // console.log(arr);
+    //
+    // arr.pop();
+    // console.log(arr);
+    // arr.unshift('asd');
+    // console.log(arr);
+    // const shift = arr.shift();
+    // console.log(arr);
+    // console.log(shift);
+
+    let users = [
+        {name: 'vasya', age: 31, status: false},
+        {name: 'petya', age: 30, status: true},
+        {name: 'kolya', age: 29, status: true},
+        {name: 'olya', age: 28, status: false},
+        {name: 'max', age: 30, status: true},
+        {name: 'anya', age: 31, status: false},
+        {name: 'oleg', age: 28, status: false},
+        {name: 'andrey', age: 29, status: true},
+        {name: 'masha', age: 30, status: true},
+        {name: 'olya', age: 31, status: false},
+        {name: 'max', age: 31, status: true}
+    ];
+
+    // const slice = users.slice(2, 7);
+    // console.log(slice);
+    //
+    // const splice = users.splice(2, 1, 'foobar');
+    // console.log(splice);
+    //
+    // console.log(users);
+    //
+    // const reverse = users.reverse();
+    // console.log(reverse);
+
+    // users.forEach(function (xxx) {
+    //     console.log(xxx);
+    // });
+
+    // const filter = users.filter(function (user) {
+    //     return user.age > 30;
+    // });
+    // console.log(filter);
+
+    // const map = users.map(function (user) {
+    //     let copy = {...user};
+    //     delete copy.status;
+    //     return copy;
+    // });
+    //
+    // console.log(map);
+    // console.log(users);
+
+    function filter(arr, callback) {
+        let mas = [];
+        for (const item of arr) {
+            if (callback(item)) {
+                mas.push(item);
+            }
+        }
+        return mas;
+    }
+
+    const filter1 = filter(users, function (xxx) {
+        return xxx.age > 30;
+    });
+
+    console.log(filter1);
+
+
+</script>
 </body>
 </html>

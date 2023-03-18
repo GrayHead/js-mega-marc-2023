@@ -1,10 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+
+<script>
+
+    // let x = 0;
+    // setTimeout(function () {
+    //     console.log('hello');
+    //     x = 100500;
+    // }, 3000);
+    //
+    // console.log(x);
+    // setTimeout(function () {
+    //     console.log('hello');
+    //     x = 100500;
+    // }, 1000);
+
+
+    // setTimeout(function () {
+    //     console.log('hello');
+    //     setTimeout(function () {
+    //         console.log('hi');
+    //         setTimeout(function () {
+    //             console.log('olla');
+    //         }, 3000);
+    //     }, 2000);
+    // }, 1000);
+
+    function foobar(txt, timeout) {
+        return new Promise((resolve) => {
+            setTimeout(function () {
+                console.log(txt);
+                resolve();
+            }, timeout);
+        });
+    }
+
+    foobar('hello', 1000)
+        .then(data => foobar('hi', 2000))
+        .then(value => foobar('olla', 3000))
+
+
+</script>
 </body>
 </html>

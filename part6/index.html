@@ -1,10 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>DOM</title>
 </head>
 <body>
-$END$
+<!--//asdsad-->
+<ul id="xxx">
+    <li class="target">data 1</li>
+    <li>data 2</li>
+    <li>data 3</li>
+    <li class="target">data 4</li>
+    <li>data 5</li>
+    <li class="target">data 6</li>
+    <li>data 7</li>
+    <li>data 8</li>
+    <li>data 9</li>
+    <li>data 10</li>
+</ul>
+
+<script>
+    // console.log(document);
+    // console.log(document.head);
+    // console.log(document.body);
+    // const xxx = document.getElementById('xxx'); // 1
+    // const liList = document.getElementsByTagName('li'); // HTML Collection
+    // for (const item of liList) {
+    //     item.innerText = '<b>hello</b>';
+    // }
+    // const targets = document.getElementsByClassName('target'); // HTML Collection
+    //
+    // console.log(document.body.childNodes);
+    //
+    // [].slice()
+
+
+    // const ul = document.getElementById('xxx');
+    // ul.onclick = function () {
+    //     console.log('sahdfhasfd');
+    // };
+
+    const liList = document.getElementsByTagName('li');
+
+    for (const liListElement of liList) {
+        liListElement.onclick = function () {
+            console.log(this.innerText);
+        };
+    }
+
+</script>
 </body>
 </html>

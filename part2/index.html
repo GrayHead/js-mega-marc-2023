@@ -1,10 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+
+    // let x = 1;
+    // let y = x + 100;
+    // console.log(x, y);
+    //
+    // let user = {
+    //     name: 'vasya'
+    // }
+    //
+    // let user2 = user; //{name vasaya}
+    // user2.age = 123; // {name age}
+    //
+    // console.log(user);
+
+
+    let users = [
+        {name: 'vasya', age: 31, status: false},
+        {name: 'petya', age: 30, status: true},
+        {name: 'kolya', age: 29, status: true},
+        {name: 'olya', age: 28, status: false},
+        {name: 'max', age: 30, status: true},
+        {name: 'anya', age: 31, status: false},
+        {name: 'oleg', age: 28, status: false},
+        {name: 'andrey', age: 29, status: true},
+        {name: 'masha', age: 30, status: true},
+        {name: 'olya', age: 31, status: false},
+        {name: 'max', age: 31, status: true},
+        {name: 'xam', age: 31, status: true},
+    ];
+
+    // iter
+    // let filterUsers = [];
+    // let filterUsers2 = [];
+    //
+    // for (const user of users) {
+    //     if (user.status) {
+    //         filterUsers.push(user);
+    //     } else {
+    //         filterUsers2.push(user);
+    //     }
+    // }
+    // console.log(filterUsers);
+    // console.log(filterUsers2)
+
+    // for (let i = 2; i < users.length - 1; i++) {
+    //     let user = users[i];
+    //     console.log(user);
+    // }
+
+    //12
+    // for (let i = users.length - 1; i >= 0; i--) {
+    //     const user = users[i];
+    //     console.log(user);
+    // }
+
+    // let i = 0;
+    // while (i < users.length) {
+    //     console.log(users[i]);
+    //     i++;
+    // }
+
+    // do {
+    //     console.log('asfahsgdfsa');
+    // } while (false)
+
+
+    // let user = {
+    //     name: 'vasya', age: 31, status: false, skills: ['js', 'java']
+    // };
+    //
+    //
+    // // itin
+    // for (const key in user) {
+    //     console.log(key, user[key]);
+    // }
+
+
+    let coursesArray = [
+        {
+            title: 'JavaScript Complex',
+            monthDuration: 5,
+            hourDuration: 909,
+            modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'react', 'angular', 'aws', 'docker', 'git', 'node.js']
+        },
+        {
+            title: 'Java Complex',
+            monthDuration: 6,
+            hourDuration: 909,
+            modules: ['html',
+                'css',
+                'js',
+                'mysql',
+                'mongodb',
+                'angular',
+                'aws',
+                'docker',
+                'git',
+                'java core',
+                'java advanced']
+        },
+        {
+            title: 'Python Complex',
+            monthDuration: 6,
+            hourDuration: 909,
+            modules: ['html',
+                'css',
+                'js',
+                'mysql',
+                'mongodb',
+                'angular',
+                'aws',
+                'docker',
+                'python core',
+                'python advanced']
+        },
+        {
+            title: 'QA Complex',
+            monthDuration: 4,
+            hourDuration: 909,
+            modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'git', 'QA/QC']
+        },
+        {
+            title: 'FullStack',
+            monthDuration: 7,
+            hourDuration: 909,
+            modules: ['html',
+                'css',
+                'js',
+                'mysql',
+                'mongodb',
+                'react',
+                'angular',
+                'aws',
+                'docker',
+                'git',
+                'node.js',
+                'python',
+                'java']
+        },
+        {
+            title: 'Frontend',
+            monthDuration: 4,
+            hourDuration: 909,
+            modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'react', 'angular', 'aws', 'docker', 'git', 'sass']
+        }
+    ];
+
+
+    for (const course of coursesArray) {
+        document.write(`<p>`);
+        document.write(`<div>course title - ${course.title}</div>`);
+        document.write(`<div>course duration - ${course.hourDuration}</div>`);
+
+        document.write('<ul>');
+        for (const module of course.modules) {
+            document.write(`<li>${module}</li>`);
+        }
+
+        document.write('</ul>');
+
+
+        document.write(`</p>`);
+
+    }
+
+
+</script>
 </body>
 </html>

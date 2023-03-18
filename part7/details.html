@@ -1,10 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+
+<h1>user details</h1>
+
+<script>
+
+    const url = new URL(location.href);
+    console.log(url);
+
+    const objDirty = url.searchParams.get('data');
+    console.log(objDirty);
+    const obj = JSON.parse(objDirty);
+    console.log(obj);
+
+    const div = document.createElement('div');
+    div.innerText = objDirty;
+
+    document.body.appendChild(div);
+</script>
 </body>
 </html>
